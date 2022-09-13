@@ -66,11 +66,11 @@ def compare (A_followers, B_followers, A, B):
         # end of game
         game_on = False   
     elif (user_choice == 'A' and A_followers > B_followers):
-      # loop with same A and new randomized B
+      A = B 
+      # loop with the loosing B as A and new randomized B
       pick_new_B_and_compare_again (A, B) 
-    elif (user_choice == 'B' and A_followers < B_followers):  
-      A = B    
-      # loop with A (old B) and a new randomized B
+    elif (user_choice == 'B' and A_followers < B_followers):     
+      # loop with the same loosing A and a new randomized B
       pick_new_B_and_compare_again (A, B)
     else: 
       print("Enter 'A' or 'B', try again")
